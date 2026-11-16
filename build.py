@@ -59,9 +59,9 @@ def build(lang):
         s = s.replace('"url": "https://www.soulbunsandballs.com/",', '"url": "https://www.soulbunsandballs.com/el/",')
         s = s.replace('"hasMenu": "https://www.soulbunsandballs.com/#menu"', '"hasMenu": "https://www.soulbunsandballs.com/el/#menu"')
         # relative asset paths from /el/
-        for a in ['tagline.png','botm.jpg','avatar.svg','ig1.jpg','ig2.jpg','ig3.jpg']:
+        for a in ['tagline.png','botm.jpg','avatar.png','logo.png','ig1.jpg','ig2.jpg','ig3.jpg']:
             s = s.replace(f'src="{a}"', f'src="/{a}"')
-        s = s.replace('href="avatar.svg"', 'href="/avatar.svg"')
+        s = s.replace('href="avatar.png"', 'href="/avatar.svg"')
         s = s.replace("b.textContent=(html.lang==='el'?'Έγινε':'Copied')", "b.textContent='Έγινε'")
     assert 'data-el' not in s and 'lang-toggle' in s
     return s
