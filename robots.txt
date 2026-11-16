@@ -1,6 +1,7 @@
 # Soul Buns & Balls — everyone is welcome to read this site, including AI search and assistants.
 User-agent: *
 Allow: /
+Disallow: /_src/
 
 # AI search / assistant crawlers (explicitly allowed)
 User-agent: OAI-SearchBot
