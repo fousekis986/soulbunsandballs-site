@@ -1,0 +1,25 @@
+# Soul Buns & Balls — everyone is welcome to read this site, including AI search and assistants.
+User-agent: *
+Allow: /
+
+# AI search / assistant crawlers (explicitly allowed)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: Meta-ExternalAgent
+User-agent: DuckAssistBot
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.soulbunsandballs.com/sitemap.xml

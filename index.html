@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soul Buns &amp; Balls | Smash Burgers in Kalamata</title>
+<meta name="description" content="Soul Buns &amp; Balls is an independent burger restaurant in Kalamata, Greece, serving smash burgers, classic beef burgers, homemade sauces and crispy fries. Open Tue–Sun from 18:00 until sold out. Visit Anagnostara 3 or order via Wolt.">
+<meta property="og:title" content="Soul Buns &amp; Balls | Smash Burgers in Kalamata">
+<meta property="og:description" content="Smash burgers done right. Anagnostara 3, Kalamata. Tue–Sun from 18:00 until sold out. Dine in, takeaway and Wolt delivery.">
+<meta property="og:image" content="https://www.soulbunsandballs.com/og.jpg">
+<meta property="og:image:alt" content="Soul Buns &amp; Balls burger restaurant in Kalamata">
+<meta property="og:site_name" content="Soul Buns &amp; Balls">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://www.soulbunsandballs.com/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="restaurant.restaurant">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Soul Buns &amp; Balls | Smash Burgers in Kalamata">
+<meta name="twitter:description" content="Smash burgers done right. Anagnostara 3, Kalamata.">
+<meta name="twitter:image" content="https://www.soulbunsandballs.com/og.jpg">
+<link rel="canonical" href="https://www.soulbunsandballs.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Nunito:wght@800&display=swap">
+<style>
+/* Layout: white page, black text; teal and orange used as accents (headings, prices, buttons, rules). */
+:root{
+  --bg:#ffffff;
+  --ink:#111111;
+  --muted:#555555;
+  --teal:#0b8a9b;
+  --teal-deep:#076d7b;
+  --teal-tint:#e6f4f6;
+  --orange:#f7941d;
+  --orange-tint:#fff1df;
+  --wolt:#009de0;
+  --rule:#d9e6e8;
+  --font-body:"Jost",-apple-system,"Avenir Next","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-weight:400;line-height:1.5;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* Announcement bar (the sold-out app will later flip this text) */
+.announce{background:var(--teal);color:#fff;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.announce .wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 12px;padding-block:8px;text-align:center}
+.announce .dot{width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block}
+.announce.soldout{background:var(--orange);color:#111}
+@media (max-width:520px){.announce .dot,.announce span:first-child{display:none}}
+
+/* Nav */
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:3px solid var(--teal)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
+.brand{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;text-decoration:none;color:var(--teal)}
+nav{display:flex;align-items:center;gap:22px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--ink)}
+nav a:hover,nav a:focus-visible{color:var(--orange);outline:none}
+nav a.wolt{display:inline-flex;align-items:center;gap:8px;color:#fff;background:var(--wolt);padding:7px 16px;border-radius:999px;font-weight:600}
+nav a.wolt:hover{color:#fff;filter:brightness(1.08)}
+.wolt-word{font-family:"Nunito",var(--font-body);font-weight:800;font-size:1.05rem;letter-spacing:0;text-transform:none;line-height:1}
+
+.lang{border:1px solid var(--rule);background:none;color:var(--ink);font:inherit;font-size:.8rem;letter-spacing:.1em;padding:5px 10px;border-radius:6px;cursor:pointer}
+.lang:hover{border-color:var(--teal);color:var(--teal)}
+.copy-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.copy{border:1px solid var(--rule);background:none;color:var(--muted);font:inherit;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px;cursor:pointer}
+.copy:hover{border-color:var(--teal);color:var(--teal)}
+.copy.done{border-color:var(--teal);background:var(--teal);color:#fff}
+
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Hero */
+.hero{text-align:center;padding-block:56px 48px}
+.logo{width:min(360px,70vw);height:auto;margin:0 auto;display:block}
+.tagline-img{display:block;width:min(260px,55vw);height:auto;margin:22px auto 0}
+.hero p{margin:24px auto 0;max-width:34ch;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.chip{background:var(--teal-tint);color:var(--teal-deep);border-radius:999px;padding:7px 16px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+
+/* Story */
+.story{max-width:62ch}
+.story p{margin:0 0 16px;font-size:1.05rem;line-height:1.65}
+.story p:last-child{margin:0;color:var(--teal);font-weight:500}
+
+/* Menu jump links */
+.jump{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:-10px 0 34px}
+.jump a{text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:6px 14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.jump a:hover{border-color:var(--teal);color:var(--teal)}
+.sub{scroll-margin-top:110px}
+
+/* Sections */
+section{padding-block:52px;border-top:1px solid var(--rule)}
+h2{font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);font-size:.95rem;text-align:center;margin:0 0 34px}
+h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange);margin:12px auto 0}
+.menu-group{display:grid;gap:30px}
+.item{text-align:center}
+.item h3{font-weight:500;font-size:clamp(1.5rem,4.4vw,2.1rem);letter-spacing:.04em;text-transform:uppercase;margin:0;line-height:1.1;text-wrap:balance;color:var(--ink)}
+.item .desc{margin:6px auto 10px;max-width:60ch;color:var(--muted)}
+.price{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;font-size:1.2rem;letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.price b{font-weight:600;color:var(--orange)}
+.note{display:inline-block;margin-top:12px;background:var(--orange-tint);padding:6px 14px;font-size:.8rem;letter-spacing:.04em;border-radius:4px}
+.note.veg::before{content:"\2742\00a0";color:var(--teal)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.inline-list{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;font-size:1.02rem;letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.inline-list b{font-weight:600;color:var(--orange)}
+.small{font-size:.8rem;color:var(--muted);text-align:center;margin:12px 0 0}
+.sub{text-align:center;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;color:var(--teal);font-weight:600;margin:40px 0 20px}
+
+/* Burger of the month: the poster sits as a framed picture on a light teal card */
+.botm{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:40px;align-items:center;background:var(--teal-tint);border-radius:18px;padding:32px}
+.botm figure{margin:0}
+.botm figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 14px 34px rgba(11,138,155,.25)}
+.botm figcaption{display:none}
+.botm .text{min-width:0}
+.botm .eyebrow{color:var(--teal);letter-spacing:.3em;text-transform:uppercase;font-size:.8rem;font-weight:600;margin:0 0 10px}
+.botm h3{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px;color:var(--ink);line-height:1.05}
+.botm p{margin:0;letter-spacing:.06em;text-transform:uppercase;font-size:.95rem;line-height:1.7;color:var(--muted)}
+.botm p b{color:var(--orange);font-weight:600}
+.botm .botm-note{margin-top:14px;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)}
+.botm .tag{display:inline-block;margin-top:18px;background:var(--orange);color:#111;border-radius:999px;padding:6px 14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+@media (max-width:720px){.botm{grid-template-columns:1fr;padding:20px;gap:22px}.botm figure{max-width:300px;margin:0 auto}}
+
+/* Instagram */
+.ig-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 0 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ig-carousel::-webkit-scrollbar{display:none}
+.ig-card{flex:0 0 min(328px,85vw);scroll-snap-align:center;min-width:0}
+.ig-card .instagram-media{margin:0 !important;min-width:0 !important;max-width:100% !important;width:100% !important;border:1px solid var(--rule) !important;border-radius:12px !important;box-shadow:none !important}
+.ig-card blockquote a{display:block;padding:40px 20px;text-align:center;color:var(--teal);text-decoration:none;background:var(--teal-tint);border-radius:12px}
+.ig-nav{display:flex;justify-content:center;gap:10px;margin:4px 0 22px}
+.ig-arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:none;color:var(--ink);font:inherit;font-size:1.1rem;cursor:pointer}
+.ig-arrow:hover{border-color:var(--teal);color:var(--teal)}
+@media (min-width:1100px){.ig-carousel{justify-content:center}}
+.ig-btn{display:inline-block;border:2px solid var(--teal);color:var(--teal);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:600;padding:10px 20px;border-radius:999px}
+.ig-btn:hover{background:var(--teal);color:#fff}
+
+/* Find us */
+.find{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;align-items:start}
+@media (max-width:760px){.find{grid-template-columns:1fr}}
+.hours{list-style:none;margin:0;padding:0;font-variant-numeric:tabular-nums}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule);letter-spacing:.06em;text-transform:uppercase;font-size:.95rem}
+.hours li span:last-child{color:var(--teal);font-weight:600}
+.hours li.closed span:last-child{color:var(--muted);font-weight:400}
+.contact{margin:26px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.contact a{text-decoration:none;border-bottom:1px solid var(--teal)}
+.contact a:hover{color:var(--orange);border-color:var(--orange)}
+.map{position:relative;border-radius:18px;overflow:hidden;background:var(--teal-tint);min-height:420px;border:1px solid var(--rule)}
+.map iframe{display:block;width:100%;height:100%;min-height:420px;border:0;position:absolute;inset:0}
+.map-btn{position:absolute;left:14px;bottom:14px;background:var(--orange);color:#111;text-decoration:none;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;padding:10px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+
+/* Footer */
+footer{background:var(--teal);color:#fff;padding-block:40px 48px;text-align:center}
+.social{display:flex;justify-content:center;gap:14px;margin-bottom:22px}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--orange);color:#111;text-decoration:none}
+.social a:hover{background:#fff}
+.social svg{width:22px;height:22px;fill:currentColor}
+footer p{margin:6px 0;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}
+@media (max-width:520px){nav a:not(.wolt){display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://www.soulbunsandballs.com/#restaurant",
+  "name": "Soul Buns & Balls",
+  "description": "Independent burger restaurant in Kalamata, Greece, specializing in smash burgers, classic beef burgers, homemade sauces and crispy fries.",
+  "url": "https://www.soulbunsandballs.com/",
+  "image": "https://www.soulbunsandballs.com/og.jpg",
+  "telephone": "+302721303682",
+  "email": "soulbunsandballs@gmail.com",
+  "servesCuisine": ["Burgers", "Smash burgers", "American"],
+  "priceRange": "€",
+  "hasMenu": "https://www.soulbunsandballs.com/#menu",
+  "acceptsReservations": "False",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Anagnostara 3",
+    "addressLocality": "Kalamata",
+    "postalCode": "24100",
+    "addressCountry": "GR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/soulbunsandballs/",
+    "https://www.facebook.com/soulbunsandballs/",
+    "https://wolt.com/el/grc/kalamata/restaurant/soul-buns-balls"
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "18:00"
+  }]
+}
+</script>
+</head>
+<body>
+
+<div class="announce" id="status-bar"><div class="wrap"><span data-el="Χωρίς κρατήσεις">First come, first served</span><span class="dot"></span><span data-el="Ανοιχτά Τρ–Κυ από τις 18:00 μέχρι να τελειώσουν">Open Tue–Sun from 18:00 until sold out</span></div></div>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Soul Buns &amp; Balls</a>
+    <nav aria-label="Sections">
+      <button type="button" class="lang" id="lang-toggle" aria-label="Αλλαγή γλώσσας / Switch language">ΕΛ</button>
+      <a href="#menu" data-el="Μενού">Menu</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#find-us" data-el="Πού είμαστε">Find us</a>
+      <a class="wolt" href="https://wolt.com/el/grc/kalamata/restaurant/soul-buns-balls" target="_blank" rel="noopener"><span data-el="Παράγγειλε με">Order via</span> <b class="wolt-word">Wolt</b></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1 class="sr-only" data-el="Smash burgers στην Καλαμάτα | Soul Buns &amp; Balls">Smash burgers in Kalamata | Soul Buns &amp; Balls</h1>
+    <!-- Replace this inline SVG with your real logo file, e.g. <img class="logo" src="logo.svg" alt="Soul Buns & Balls"> -->
+    <svg class="logo" viewBox="0 0 480 150" role="img" aria-label="Soul Buns & Balls logo">
+      <g fill="#f7941d">
+        <path d="M60 10 a44 44 0 0 0 0 88 Z"/>
+        <path d="M66 10 a44 44 0 0 1 0 88 Z" transform="translate(0,46)"/>
+        <circle cx="180" cy="76" r="44"/>
+        <path d="M246 76 a44 44 0 0 0 88 0 Z"/>
+        <path d="M352 10 a44 44 0 0 1 0 88 Z"/>
+        <path d="M410 98 a44 44 0 0 1 88 0 Z" transform="translate(-50,46)"/>
+      </g>
+      <text x="240" y="146" text-anchor="middle" fill="#f7941d" font-family="Jost, sans-serif" font-size="14" letter-spacing="4">SOUL BUNS &amp; BALLS</text>
+    </svg>
+    <img class="tagline-img" src="tagline.png" alt="Soul Buns & Balls — Soul in every bite" width="324" height="206">
+    <p data-el="Ένα smashburger spot στην Καλαμάτα με μικρό, προσεγμένο μενού. Λίγα burgers, φρέσκα κάθε μέρα, φτιαγμένα με μεράκι.">A smashburger spot in Kalamata with a short, focused menu. A small selection of burgers, cooked fresh daily with care and intention.</p>
+    <div class="chips">
+      <span class="chip" data-el="Σπιτικό">Homemade</span>
+      <span class="chip" data-el="Τίμιο">Honest</span>
+      <span class="chip" data-el="Περιορισμένο">Limited</span>
+      <span class="chip" data-el="Τρ–Κυ · 18:00 μέχρι να τελειώσουν">Tue–Sun · 18:00 till sold out</span>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2 data-el="Μενού">Menu</h2>
+      <nav class="jump" aria-label="Menu sections">
+        <a href="#burgers">Burgers</a><a href="#fries" data-el="Πατάτες &amp; σάλτσες">Fries &amp; sauces</a><a href="#drinks" data-el="Ποτά">Drinks</a>
+      </nav>
+      <p class="sub" id="burgers" style="margin-top:0">Burgers</p>
+      <div class="menu-group">
+        <div class="item">
+          <h3>Soul Beef Smashburger</h3>
+          <p class="desc" data-el="smashed μοσχαρίσιο μπιφτέκι, cheddar, σπιτικά πίκλες, iceberg, κρεμμύδι, soul secret sauce">smashed beef patty, cheddar, homemade pickles, iceberg, onions, soul secret sauce</p>
+          <div class="price"><span>Single smash <b>6.5€</b></span><span>Double smash <b>9€</b></span><span>Triple smash <b>11.5€</b></span></div>
+        </div>
+        <div class="item">
+          <h3>Oldschool</h3>
+          <p class="desc" data-el="κλασικό μοσχαρίσιο μπιφτέκι, cheddar, σπιτικά πίκλες, iceberg, κρεμμύδι, soul secret sauce">classic beef patty, cheddar, homemade pickles, iceberg, onions, soul secret sauce</p>
+          <div class="price"><span><b>9€</b></span></div>
+        </div>
+        <div class="item">
+          <h3>Burger of the Month</h3>
+          <p class="desc" data-el="μια νέα δημιουργία κάθε μήνα, με φρέσκα εποχιακά υλικά">a new creation every month, with fresh seasonal ingredients</p>
+          <div class="price"><span><a href="#botm" style="text-decoration:none"><b data-el="δες αυτού του μήνα ↓">see this month ↓</b></a></span></div>
+        </div>
+      </div>
+
+      <p class="sub" id="fries" data-el="Πατάτες &amp; σάλτσες">Fries &amp; sauces</p>
+      <div class="menu-group">
+        <div class="item">
+          <h3>Really Crunchy Fries</h3>
+          <p class="desc" data-el="πολύ τραγανές τηγανητές πατάτες με τη φλούδα">skin-on really crunchy fried potatoes</p>
+          <div class="price"><span>Side fries <b>2€</b></span><span>Whole fries <b>4€</b></span></div>
+        </div>
+        <div class="item">
+          <h3>Loaded Fries</h3>
+          <p class="desc" data-el="τραγανές πατάτες, σάλτσα της επιλογής σου, smashed μπιφτέκι, cheddar">crunchy fries, sauce of your choice, smashed patty, cheddar</p>
+          <div class="price"><span><b>9€</b></span></div>
+        </div>
+        <div class="item">
+          <h3>Soul Sauces</h3>
+          <div class="inline-list" style="margin-top:12px">
+            <span>Soul <b>1.5€</b></span><span><span data-el="Σκόρδο">Garlic</span> <b>1.5€</b></span><span>Sriracha <b>1.5€</b></span><span><span data-el="Τρούφα">Truffle</span> <b>2€</b></span><span>Ketchup <b>1€</b></span><span>Mayo <b>1€</b></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub" id="drinks" data-el="Ποτά">Drinks</p>
+      <div class="menu-group">
+        <div class="inline-list">
+          <span>Cola <b>2€</b></span><span>Zero <b>2€</b></span><span>Sprite <b>2€</b></span><span>Schweppes <b>2.5€</b></span><span><span data-el="Ανθρακούχο">Sparkling</span> <b>1.5€</b></span><span><span data-el="Νερό">Water</span> <b>0.5€</b></span>
+        </div>
+        <div class="inline-list">
+          <span>Carlsberg <b>4€</b></span><span>Kalamata <b>5€</b></span><span>Sura <b>5€</b></span><span><span data-el="Μπίρα IPA">IPA beer</span> <b>6€</b></span>
+        </div>
+        <div class="inline-list">
+          <span>Paloma <b>7€</b></span>
+        </div>
+      </div>
+      <p class="small" style="margin-top:36px" data-el="Χωρίς κρατήσεις · Ενημερώστε μας για τυχόν αλλεργίες">First come, first served · Please inform us if you have any allergies</p>
+    </div>
+  </section>
+
+  <section id="botm">
+    <div class="wrap">
+      <h2 data-el="Burger του μήνα">Burger of the month</h2>
+      <div class="botm">
+        <!-- Each month: replace botm.jpg with the new poster, and update the three text lines + the tag below -->
+        <figure><img src="botm.jpg" alt="Kuchisabishii Smash, November 2026 Burger of the Month at Soul Buns & Balls, Kalamata" width="1500" height="1874" loading="lazy"><figcaption>Burger of the month poster</figcaption></figure>
+        <div class="text">
+          <!-- Update these three lines each month -->
+          <p class="eyebrow" data-el="Νοέμβριος 2026">November 2026</p>
+          <h3>Kuchisabishii Smash</h3>
+          <p>Potato bun · smashed patties · cheddar · pickled mushrooms · cabbage<br>crunchy fried onion · Kewpie mayo · tonkatsu ponzu ketchup</p>
+          <p class="botm-note" data-el="Kuchisabishii: η ιαπωνική λέξη για το «μοναχικό στόμα», όταν θες να φας όχι από πείνα αλλά για παρέα.">Kuchisabishii: the Japanese word for a lonely mouth, when you want to eat not from hunger but for company.</p>
+          <span class="tag" data-el="Όλο τον Νοέμβριο">Available all November</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="instagram">
+    <div class="wrap">
+      <h2>@soulbunsandballs</h2>
+      <!-- INSTAGRAM CAROUSEL: to add or swap a post, copy one of the POST blocks below and change the link (both places). -->
+      <div class="ig-carousel" id="ig-carousel">
+        <!-- POST: https://www.instagram.com/p/DfZoZ9bK8yS/ -->
+        <div class="ig-card"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DfZoZ9bK8yS/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DfZoZ9bK8yS/" target="_blank" rel="noopener">View this post on Instagram</a></blockquote></div>
+        <!-- POST: https://www.instagram.com/p/DaabGRWI4Rl/ -->
+        <div class="ig-card"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DaabGRWI4Rl/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DaabGRWI4Rl/" target="_blank" rel="noopener">View this post on Instagram</a></blockquote></div>
+        <!-- POST: https://www.instagram.com/p/DfOHlk7oe-W/ -->
+        <div class="ig-card"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DfOHlk7oe-W/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DfOHlk7oe-W/" target="_blank" rel="noopener">View this post on Instagram</a></blockquote></div>
+      </div>
+      <div class="ig-nav"><button type="button" class="ig-arrow" data-dir="-1" aria-label="Previous post">←</button><button type="button" class="ig-arrow" data-dir="1" aria-label="Next post">→</button></div>
+      <p style="text-align:center;margin:0"><a class="ig-btn" href="https://www.instagram.com/soulbunsandballs/" target="_blank" rel="noopener" data-el="Ακολούθησέ μας στο Instagram">Follow on Instagram</a></p>
+    </div>
+  </section>
+
+  <section id="find-us">
+    <div class="wrap">
+      <h2 data-el="Πού είμαστε">Find us</h2>
+      <div class="find">
+        <div>
+          <ul class="hours">
+            <li class="closed"><span data-el="Δευτέρα">Monday</span><span data-el="Κλειστά">Closed</span></li>
+            <li><span data-el="Τρίτη">Tuesday</span><span data-el="18:00 – μέχρι να τελειώσουν">18:00 – sold out</span></li>
+            <li><span data-el="Τετάρτη">Wednesday</span><span data-el="18:00 – μέχρι να τελειώσουν">18:00 – sold out</span></li>
+            <li><span data-el="Πέμπτη">Thursday</span><span data-el="18:00 – μέχρι να τελειώσουν">18:00 – sold out</span></li>
+            <li><span data-el="Παρασκευή">Friday</span><span data-el="18:00 – μέχρι να τελειώσουν">18:00 – sold out</span></li>
+            <li><span data-el="Σάββατο">Saturday</span><span data-el="18:00 – μέχρι να τελειώσουν">18:00 – sold out</span></li>
+            <li><span data-el="Κυριακή">Sunday</span><span data-el="18:00 – μέχρι να τελειώσουν">18:00 – sold out</span></li>
+          </ul>
+          <ul class="contact">
+            <li class="copy-row"><span data-el="Αναγνωσταρά 3, Καλαμάτα 24100">Anagnostara 3, Kalamata 24100</span> <button type="button" class="copy" data-copy="Anagnostara 3, Kalamata 24100" aria-label="Copy address" data-el="Αντιγραφή">Copy</button></li>
+            <li class="copy-row"><a href="tel:+302721303682">+30 2721 303682</a> <button type="button" class="copy" data-copy="+302721303682" aria-label="Copy phone number" data-el="Αντιγραφή">Copy</button></li>
+            <li class="copy-row"><a href="mailto:soulbunsandballs@gmail.com">soulbunsandballs@gmail.com</a> <button type="button" class="copy" data-copy="soulbunsandballs@gmail.com" aria-label="Copy email" data-el="Αντιγραφή">Copy</button></li>
+            <li data-el="Φάε στο μπαρ ή πάρε πακέτο">Dine in at the bar or order takeaway</li>
+          </ul>
+        </div>
+        <div class="map">
+          <!--MAP-->
+          <iframe title="Map to Soul Buns & Balls" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Anagnostara+3,+Kalamata+24100,+Greece&z=17&output=embed"></iframe>
+          <!--/MAP-->
+          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Anagnostara+3+Kalamata+24100" target="_blank" rel="noopener" data-el="Άνοιγμα στο Google Maps">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="social">
+      <a href="https://www.instagram.com/soulbunsandballs/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/soulbunsandballs/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22h3.4z"/></svg>
+      </a>
+    </div>
+    <p data-el="Smash burgers όπως πρέπει">Smash burgers done right</p>
+    <img src="tagline.png" alt="Soul in every bite" width="324" height="206" style="width:150px;height:auto;margin:10px auto 0;display:block">
+    <p>© 2026 Soul Buns &amp; Balls · Kalamata</p>
+  </div>
+</footer>
+
+
+<script async src="https://www.instagram.com/embed.js"></script>
+<script>
+(function(){
+  var html=document.documentElement, btn=document.getElementById('lang-toggle');
+  var els=document.querySelectorAll('[data-el]');
+  els.forEach(function(e){e.setAttribute('data-en',e.innerHTML);});
+  function setLang(l){
+    els.forEach(function(e){e.innerHTML=e.getAttribute(l==='el'?'data-el':'data-en');});
+    html.lang=l; btn.textContent=(l==='el'?'EN':'ΕΛ');
+    try{localStorage.setItem('sbb-lang',l);}catch(err){}
+  }
+  var saved=null; try{saved=localStorage.getItem('sbb-lang');}catch(err){}
+  if(!saved && /^el/i.test(navigator.language||'')) saved='el';
+  if(saved==='el') setLang('el');
+  btn.addEventListener('click',function(){setLang(html.lang==='el'?'en':'el');});
+
+  var car=document.getElementById('ig-carousel');
+  document.querySelectorAll('.ig-arrow').forEach(function(b){
+    b.addEventListener('click',function(){
+      var card=car.querySelector('.ig-card'); var step=card?card.getBoundingClientRect().width+16:340;
+      car.scrollBy({left:step*Number(b.getAttribute('data-dir')),behavior:'smooth'});
+    });
+  });
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy'), orig=b.textContent;
+      function ok(){b.textContent=(html.lang==='el'?'Έγινε':'Copied');b.classList.add('done');setTimeout(function(){b.textContent=orig;b.classList.remove('done');},1500);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(b.previousElementSibling);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand('copy');ok();}catch(e){}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fallback);}else{fallback();}
+    });
+  });
+})();
+</script>
+</body>
+</html>
