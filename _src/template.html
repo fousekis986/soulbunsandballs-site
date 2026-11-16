@@ -124,6 +124,9 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 .botm h3{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px;color:var(--ink);line-height:1.05}
 .botm p{margin:0;letter-spacing:.06em;text-transform:uppercase;font-size:.95rem;line-height:1.7;color:var(--muted)}
 .botm p b{color:var(--orange);font-weight:600}
+.ing{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ing li{background:#fff;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);line-height:1.2}
+@media (max-width:720px){.ing{justify-content:center}.botm .text{text-align:center}}
 .botm .botm-note{margin-top:14px;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)}
 .botm .tag{display:inline-block;margin-top:18px;background:var(--orange);color:#111;border-radius:999px;padding:6px 14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 @media (max-width:720px){.botm{grid-template-columns:1fr;padding:20px;gap:22px}.botm figure{max-width:300px;margin:0 auto}}
@@ -325,10 +328,10 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
         <!-- Each month: replace botm.jpg with the new poster, and update the three text lines + the tag below -->
         <figure><img src="botm.jpg" alt="Kuchisabishii Smash, November 2026 Burger of the Month at Soul Buns & Balls, Kalamata" width="1500" height="1874" loading="lazy"><figcaption>Burger of the month poster</figcaption></figure>
         <div class="text">
-          <!-- Update these three lines each month -->
+          <!-- Update these each month: month, name, ingredient list, note, tag -->
           <p class="eyebrow" data-el="Νοέμβριος 2026">November 2026</p>
           <h3>Kuchisabishii Smash</h3>
-          <p>Potato bun · smashed patties · cheddar · pickled mushrooms · cabbage<br>crunchy fried onion · Kewpie mayo · tonkatsu ponzu ketchup</p>
+          <ul class="ing"><li>Potato bun</li><li>Smashed patties</li><li>Cheddar</li><li>Pickled mushrooms</li><li>Cabbage</li><li>Crunchy fried onion</li><li>Kewpie mayo</li><li>Tonkatsu ponzu ketchup</li></ul>
           <p class="botm-note" data-el="Kuchisabishii: η ιαπωνική λέξη για το «μοναχικό στόμα», όταν θες να φας όχι από πείνα αλλά για παρέα.">Kuchisabishii: the Japanese word for a lonely mouth, when you want to eat not from hunger but for company.</p>
           <span class="tag" data-el="Όλο τον Νοέμβριο">Available all November</span>
         </div>
