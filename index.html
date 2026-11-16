@@ -125,15 +125,12 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 @media (max-width:720px){.botm{grid-template-columns:1fr;padding:20px;gap:22px}.botm figure{max-width:300px;margin:0 auto}}
 
 /* Instagram */
-.ig-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 0 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.ig-carousel::-webkit-scrollbar{display:none}
-.ig-card{flex:0 0 min(328px,85vw);scroll-snap-align:center;min-width:0}
-.ig-card .instagram-media{margin:0 !important;min-width:0 !important;max-width:100% !important;width:100% !important;border:1px solid var(--rule) !important;border-radius:12px !important;box-shadow:none !important}
-.ig-card blockquote a{display:block;padding:40px 20px;text-align:center;color:var(--teal);text-decoration:none;background:var(--teal-tint);border-radius:12px}
-.ig-nav{display:flex;justify-content:center;gap:10px;margin:4px 0 22px}
-.ig-arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:none;color:var(--ink);font:inherit;font-size:1.1rem;cursor:pointer}
-.ig-arrow:hover{border-color:var(--teal);color:var(--teal)}
-@media (min-width:1100px){.ig-carousel{justify-content:center}}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.ig-tile{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:12px;background:var(--teal-tint)}
+.ig-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ig-tile:hover img{transform:scale(1.04)}
+@media (max-width:520px){.ig-grid{gap:6px}.ig-tile{border-radius:8px}}
+@media (prefers-reduced-motion:reduce){.ig-tile img{transition:none}}
 .ig-btn{display:inline-block;border:2px solid var(--teal);color:var(--teal);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:600;padding:10px 20px;border-radius:999px}
 .ig-btn:hover{background:var(--teal);color:#fff}
 
@@ -316,16 +313,15 @@ footer p{margin:6px 0;letter-spacing:.18em;text-transform:uppercase;font-size:.7
   <section id="instagram">
     <div class="wrap">
       <h2>@soulbunsandballs</h2>
-      <!-- INSTAGRAM CAROUSEL: to add or swap a post, copy one of the POST blocks below and change the link (both places). -->
-      <div class="ig-carousel" id="ig-carousel">
-        <!-- POST: https://www.instagram.com/p/DfZoZ9bK8yS/ -->
-        <div class="ig-card"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DfZoZ9bK8yS/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DfZoZ9bK8yS/" target="_blank" rel="noopener">View this post on Instagram</a></blockquote></div>
-        <!-- POST: https://www.instagram.com/p/DaabGRWI4Rl/ -->
-        <div class="ig-card"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DaabGRWI4Rl/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DaabGRWI4Rl/" target="_blank" rel="noopener">View this post on Instagram</a></blockquote></div>
-        <!-- POST: https://www.instagram.com/p/DfOHlk7oe-W/ -->
-        <div class="ig-card"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DfOHlk7oe-W/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DfOHlk7oe-W/" target="_blank" rel="noopener">View this post on Instagram</a></blockquote></div>
+      <!-- INSTAGRAM GRID: each tile is a photo (igN.jpg) linking to the post. To swap: replace the image and the link. -->
+      <div class="ig-grid">
+        <!-- POST 1: https://www.instagram.com/p/DfZoZ9bK8yS/ — image ig1.jpg -->
+        <a class="ig-tile" href="https://www.instagram.com/p/DfZoZ9bK8yS/" target="_blank" rel="noopener"><img src="ig1.jpg" alt="Two friends biting into Soul Buns & Balls smash burgers" width="800" height="1000" loading="lazy"></a>
+        <!-- POST 2: https://www.instagram.com/p/DaabGRWI4Rl/ — image ig2.jpg -->
+        <a class="ig-tile" href="https://www.instagram.com/p/DaabGRWI4Rl/" target="_blank" rel="noopener"><img src="ig2.jpg" alt="Wrapped burgers and crunchy fries on a tray" width="800" height="1000" loading="lazy"></a>
+        <!-- POST 3: https://www.instagram.com/p/DfOHlk7oe-W/ — image ig3.jpg -->
+        <a class="ig-tile" href="https://www.instagram.com/p/DfOHlk7oe-W/" target="_blank" rel="noopener"><img src="ig3.jpg" alt="Cross-section of a smash burger under the Soul in every bite neon sign" width="800" height="1000" loading="lazy"></a>
       </div>
-      <div class="ig-nav"><button type="button" class="ig-arrow" data-dir="-1" aria-label="Previous post">←</button><button type="button" class="ig-arrow" data-dir="1" aria-label="Next post">→</button></div>
       <p style="text-align:center;margin:0"><a class="ig-btn" href="https://www.instagram.com/soulbunsandballs/" target="_blank" rel="noopener" data-el="Ακολούθησέ μας στο Instagram">Follow on Instagram</a></p>
     </div>
   </section>
@@ -379,7 +375,6 @@ footer p{margin:6px 0;letter-spacing:.18em;text-transform:uppercase;font-size:.7
 </footer>
 
 
-<script async src="https://www.instagram.com/embed.js"></script>
 <script>
 (function(){
   var html=document.documentElement, btn=document.getElementById('lang-toggle');
@@ -395,13 +390,6 @@ footer p{margin:6px 0;letter-spacing:.18em;text-transform:uppercase;font-size:.7
   if(saved==='el') setLang('el');
   btn.addEventListener('click',function(){setLang(html.lang==='el'?'en':'el');});
 
-  var car=document.getElementById('ig-carousel');
-  document.querySelectorAll('.ig-arrow').forEach(function(b){
-    b.addEventListener('click',function(){
-      var card=car.querySelector('.ig-card'); var step=card?card.getBoundingClientRect().width+16:340;
-      car.scrollBy({left:step*Number(b.getAttribute('data-dir')),behavior:'smooth'});
-    });
-  });
   document.querySelectorAll('.copy').forEach(function(b){
     b.addEventListener('click',function(){
       var t=b.getAttribute('data-copy'), orig=b.textContent;
