@@ -57,9 +57,12 @@ a{color:inherit}
 header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:3px solid var(--teal)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
 .brand{white-space:nowrap;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;text-decoration:none;color:var(--teal)}
-nav{display:flex;align-items:center;gap:22px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
-nav a{text-decoration:none;color:var(--ink)}
+nav{display:flex;align-items:center;gap:14px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--ink);white-space:nowrap}
 nav a:hover,nav a:focus-visible{color:var(--orange);outline:none}
+nav a.call{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;color:var(--teal);border:2px solid var(--teal);padding:5px 14px;border-radius:999px;font-weight:600}
+nav a.call:hover{background:var(--teal);color:#fff}
+nav a.call svg{width:16px;height:16px;fill:currentColor;flex:none}
 nav a.wolt{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;color:#fff;background:var(--wolt);padding:7px 16px;border-radius:999px;font-weight:600}
 nav a.wolt:hover{color:#fff;filter:brightness(1.08)}
 .wolt-word{font-family:"Nunito",var(--font-body);font-weight:800;font-size:1.05rem;letter-spacing:0;text-transform:none;line-height:1}
@@ -180,7 +183,8 @@ footer p{margin:6px 0;letter-spacing:.18em;text-transform:uppercase;font-size:.7
 .consent button.yes{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:600}
 .consent button:hover{border-color:var(--teal);color:var(--teal)}
 .consent button.yes:hover{filter:brightness(1.08);color:#fff}
-@media (max-width:520px){nav a:not(.wolt):not(.lang){display:none}.brand{font-size:.78rem;letter-spacing:.1em}nav{gap:10px}nav a.wolt{padding:6px 12px;font-size:.78rem}}
+@media (max-width:1300px){nav a:not(.wolt):not(.lang):not(.call){display:none}}
+@media (max-width:520px){nav a.wolt span{display:none}nav a.wolt{padding:7px 12px}nav a.call{padding:7px;border-radius:50%}nav a.call span{display:none}nav a.call svg{width:18px;height:18px}.brand{font-size:.78rem;letter-spacing:.1em}nav{gap:10px}nav a.wolt{padding:6px 12px;font-size:.78rem}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <script type="application/ld+json">
@@ -237,6 +241,7 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
       <a href="#menu" data-el="Μενού">Menu</a>
       <a href="#instagram">Instagram</a>
       <a href="#find-us" data-el="Πού είμαστε">Find us</a>
+      <a class="call" href="tel:+302721303682"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span data-el="Κάλεσε για takeaway">Call for takeaway</span></a>
       <a class="wolt" href="https://wolt.com/el/grc/kalamata/restaurant/soul-buns-balls" target="_blank" rel="noopener"><span data-el="Παράγγειλε με">Order via</span> <b class="wolt-word">Wolt</b></a>
     </nav>
   </div>
@@ -409,7 +414,7 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
       </a>
     </div>
     <p data-el="Smash burgers όπως πρέπει">Smash burgers done right</p>
-    <img src="tagline.png" alt="Soul in every bite" width="324" height="206" style="width:150px;height:auto;margin:10px auto 0;display:block">
+    <img src="tagline.png" alt="Soul Buns & Balls — Soul in every bite" width="531" height="342" style="width:170px;height:auto;margin:12px auto 0;display:block">
     <p>© 2026 Soul Buns &amp; Balls · Kalamata</p>
   </div>
 </footer>

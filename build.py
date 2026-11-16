@@ -10,11 +10,11 @@ META = {
  'en': dict(lang='en', title='Soul Buns &amp; Balls | Smash Burgers in Kalamata',
    desc='Smash burger bar in Kalamata, Greece. Smash &amp; classic beef burgers, homemade sauces, crunchy fries. Tue–Sun from 18:00 until sold out. Anagnostara 3 · order via Wolt.',
    ogdesc='Smash burgers done right. Anagnostara 3, Kalamata. Tue–Sun from 18:00 until sold out. Dine in, takeaway and Wolt delivery.',
-   url=f'{D}/', locale='en_US', btn='ΕΛ', other='/el/', btnlabel='Ελληνικά'),
+   url=f'{D}/', locale='en_US', btn='<svg class="flag" viewBox="0 0 27 18" aria-hidden="true"><rect width="27" height="18" fill="#0d5eaf"/><g fill="#fff"><rect y="2" width="27" height="2"/><rect y="6" width="27" height="2"/><rect y="10" width="27" height="2"/><rect y="14" width="27" height="2"/><rect x="4" width="2" height="10"/><rect y="4" width="10" height="2"/></g></svg>', other='/el/', btnlabel='Ελληνικά'),
  'el': dict(lang='el', title='Soul Buns &amp; Balls | Smash Burgers στην Καλαμάτα',
    desc='Smash burger bar στην Καλαμάτα. Smash &amp; κλασικά μοσχαρίσια burgers, σπιτικές σάλτσες, τραγανές πατάτες. Τρ–Κυ από τις 18:00 έως sold out. Αναγνωσταρά 3 · παραγγελία μέσω Wolt.',
    ogdesc='Smash burgers όπως πρέπει. Αναγνωσταρά 3, Καλαμάτα. Τρ–Κυ από τις 18:00 έως sold out. Στο μπαρ, πακέτο ή Wolt.',
-   url=f'{D}/el/', locale='el_GR', btn='EN', other='/', btnlabel='English'),
+   url=f'{D}/el/', locale='el_GR', btn='<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg>', other='/', btnlabel='English'),
 }
 
 def build(lang):
@@ -44,7 +44,8 @@ def build(lang):
     # language button becomes a link to the other version
     s = re.sub(r'<button type="button" class="lang" id="lang-toggle"[^>]*>[^<]*</button>',
         f'<a class="lang" id="lang-toggle" href="{m["other"]}" hreflang="{"el" if lang=="en" else "en"}" aria-label="{m["btnlabel"]}">{m["btn"]}</a>', s)
-    s = s.replace('.lang{border:1px solid var(--rule);', '.lang{text-decoration:none;display:inline-block;border:1px solid var(--rule);')
+    s = s.replace('.lang{border:1px solid var(--rule);', '.lang{text-decoration:none;display:inline-flex;align-items:center;line-height:0;border:1px solid var(--rule);')
+    s = s.replace('/* Hero */', '.flag{width:22px;height:auto;border-radius:2px;display:block}\n\n/* Hero */', 1)
     # replace the in-page toggle script with: remember choice + optional first-visit redirect
     s = re.sub(r"  var html=document\.documentElement, btn=document\.getElementById\('lang-toggle'\);\n  var els=.*?btn\.addEventListener\('click',function\(\)\{setLang\(html\.lang==='el'\?'en':'el'\);\}\);\n",
         "  var html=document.documentElement;\n"
