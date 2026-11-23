@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """Build / (English) and /el/ (Greek) from _src/template.html.
 The template holds English text with Greek in data-el attributes."""
-import re, pathlib
+import re, pathlib, datetime
 ROOT = pathlib.Path(__file__).parent
 tpl = (ROOT / '_src' / 'template.html').read_text(encoding='utf-8')
 D = 'https://www.soulbunsandballs.com'
+TODAY = datetime.date.today().isoformat()
 
 META = {
  'en': dict(lang='en', title='Soul Buns &amp; Balls | Smash Burgers in Kalamata',
-   desc='Smash burger bar in Kalamata, Greece. Smash &amp; classic beef burgers, homemade sauces, crunchy fries. Tue–Sun from 18:00 until sold out. Anagnostara 3 · order via Wolt.',
+   desc='Smash burger bar in Kalamata, Greece. Smash &amp; classic beef burgers, homemade sauces, crunchy fries. Tue–Sun from 18:00. Anagnostara 3 · order via Wolt.',
    ogdesc='Smash burgers done right. Anagnostara 3, Kalamata. Tue–Sun from 18:00 until sold out. Dine in, takeaway and Wolt delivery.',
    url=f'{D}/', locale='en_US', btn='<svg class="flag" viewBox="0 0 27 18" aria-hidden="true"><rect width="27" height="18" fill="#0d5eaf"/><g fill="#fff"><rect x="10" y="2" width="17" height="2"/><rect x="10" y="6" width="17" height="2"/><rect y="10" width="27" height="2"/><rect y="14" width="27" height="2"/><rect x="4" width="2" height="10"/><rect y="4" width="10" height="2"/></g></svg>', other='/el/', btnlabel='Ελληνικά'),
  'el': dict(lang='el', title='Soul Buns &amp; Balls | Smash Burgers στην Καλαμάτα',
-   desc='Smash burger bar στην Καλαμάτα. Smash &amp; κλασικά μοσχαρίσια burgers, σπιτικές σάλτσες, τραγανές πατάτες. Τρ–Κυ από τις 18:00 έως sold out. Αναγνωσταρά 3 · παραγγελία μέσω Wolt.',
+   desc='Smash burger bar στην Καλαμάτα. Smash &amp; κλασικά burgers, σπιτικές σάλτσες, τραγανές πατάτες. Τρ–Κυ από τις 18:00. Αναγνωσταρά 3 · παραγγελία μέσω Wolt.',
    ogdesc='Smash burgers όπως πρέπει. Αναγνωσταρά 3, Καλαμάτα. Τρ–Κυ από τις 18:00 έως sold out. Στο μπαρ, πακέτο ή Wolt.',
    url=f'{D}/el/', locale='el_GR', btn='<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg>', other='/', btnlabel='English'),
 }
@@ -72,8 +73,8 @@ def build(lang):
 (ROOT / 'el' / 'index.html').write_text(build('el'), encoding='utf-8')
 (ROOT / 'sitemap.xml').write_text(f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>{D}/</loc><xhtml:link rel="alternate" hreflang="en" href="{D}/"/><xhtml:link rel="alternate" hreflang="el" href="{D}/el/"/><xhtml:link rel="alternate" hreflang="x-default" href="{D}/"/></url>
-  <url><loc>{D}/el/</loc><xhtml:link rel="alternate" hreflang="en" href="{D}/"/><xhtml:link rel="alternate" hreflang="el" href="{D}/el/"/><xhtml:link rel="alternate" hreflang="x-default" href="{D}/"/></url>
+  <url><loc>{D}/</loc><lastmod>{TODAY}</lastmod><xhtml:link rel="alternate" hreflang="en" href="{D}/"/><xhtml:link rel="alternate" hreflang="el" href="{D}/el/"/><xhtml:link rel="alternate" hreflang="x-default" href="{D}/"/></url>
+  <url><loc>{D}/el/</loc><lastmod>{TODAY}</lastmod><xhtml:link rel="alternate" hreflang="en" href="{D}/"/><xhtml:link rel="alternate" hreflang="el" href="{D}/el/"/><xhtml:link rel="alternate" hreflang="x-default" href="{D}/"/></url>
 </urlset>
 ''', encoding='utf-8')
 print('built / and /el/')
