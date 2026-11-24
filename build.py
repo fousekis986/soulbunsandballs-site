@@ -58,7 +58,7 @@ T = {
             intro='Every month we make one new delicious burger, and we serve it for that month only. Here are all of them so far.',
             alt='{name}, {when} Burger of the Month at Soul Buns & Balls, Kalamata', tag='Available all {month}'),
  'el': dict(all='Όλα τα burgers του μήνα', menu='Δες όλο το μενού', h1='Burger του μήνα',
-            intro='Κάθε μήνα φτιάχνουμε ένα καινούργιο delicious burger και το σερβίρουμε μόνο εκείνον τον μήνα. Εδώ είναι όλα μέχρι σήμερα.',
+            intro='Κάθε μήνα φτιάχνουμε ένα καινούργιο λαχταριστό burger και το σερβίρουμε μόνο εκείνον τον μήνα. Εδώ είναι όλα μέχρι σήμερα.',
             alt='{name}, Burger του μήνα {when} στο Soul Buns & Balls, Καλαμάτα', tag='Όλο τον {month}'),
 }
 
