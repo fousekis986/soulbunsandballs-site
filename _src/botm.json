@@ -1,0 +1,143 @@
+{
+ "_readme": "Burgers of the Month, newest first. The first entry is the current one shown on the homepage. To add a month: run _src/add_poster.py on the poster, add an entry at the top, run build.py.",
+ "burgers": [
+  {
+   "month": "2026-11",
+   "name": "Kuchisabishii Smash",
+   "slug": "kuchisabishii-smash",
+   "image": "botm/2026-11-kuchisabishii-smash",
+   "w": 900,
+   "h": 1124,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Cheddar",
+    "Pickled mushrooms",
+    "Cabbage",
+    "Crunchy fried onion",
+    "Kewpie mayo",
+    "Tonkatsu ponzu ketchup"
+   ],
+   "note": {
+    "en": "In Japan, they have a word for when your mouth feels lonely and craves a little company: kuchisabishii.<br><br>Our burgers never leave a mouth lonely, and this one is here to keep you company all November.",
+    "el": "Kuchisabishii: η ιαπωνική λέξη για το «μοναχικό στόμα», όταν θες να φας όχι από πείνα αλλά για παρέα."
+   }
+  },
+  {
+   "month": "2026-10",
+   "name": "The Local Soul",
+   "slug": "the-local-soul",
+   "image": "botm/2026-10-the-local-soul",
+   "w": 900,
+   "h": 1124,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Goat graviera",
+    "Siglino Manis",
+    "Arugula",
+    "Crunchy fried onion",
+    "Garlic confit mayo"
+   ]
+  },
+  {
+   "month": "2026-09",
+   "name": "The Deli Smash",
+   "slug": "the-deli-smash",
+   "image": "botm/2026-09-the-deli-smash",
+   "w": 900,
+   "h": 1124,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Beef pastrami",
+    "Caramelised onions",
+    "Cheddar",
+    "Homemade pickles",
+    "Soul secret sauce"
+   ]
+  },
+  {
+   "month": "2026-06",
+   "name": "The Mediterranean Job",
+   "slug": "the-mediterranean-job",
+   "image": "botm/2026-06-the-mediterranean-job",
+   "w": 900,
+   "h": 1125,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Mozzarella",
+    "Parmesan",
+    "Arugula",
+    "Marinara sauce",
+    "Garlic mayo"
+   ]
+  },
+  {
+   "month": "2026-05",
+   "name": "The Metsovo Melt",
+   "slug": "the-metsovo-melt",
+   "image": "botm/2026-05-the-metsovo-melt",
+   "w": 900,
+   "h": 1124,
+   "ingredients": [
+    "Potato bun",
+    "Double smash or oldschool patty",
+    "Caramelised onions",
+    "Metsovone",
+    "Homemade pickles",
+    "Soul secret sauce"
+   ]
+  },
+  {
+   "month": "2026-04",
+   "name": "Better Than Good",
+   "slug": "better-than-good",
+   "image": "botm/2026-04-better-than-good",
+   "w": 900,
+   "h": 1124,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Cheddar",
+    "Homemade pickled onions",
+    "Pickle sauce",
+    "Ketchup"
+   ]
+  },
+  {
+   "month": "2026-03",
+   "name": "Two Smoking Barrels",
+   "slug": "two-smoking-barrels",
+   "image": "botm/2026-03-two-smoking-barrels",
+   "w": 900,
+   "h": 1273,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Cheddar",
+    "Bacon",
+    "Apple BBQ ketchup",
+    "Homemade pickles",
+    "Fried crunchy onion"
+   ]
+  },
+  {
+   "month": "2026-02",
+   "name": "The Oklahoma Original",
+   "slug": "the-oklahoma-original",
+   "image": "botm/2026-02-the-oklahoma-original",
+   "w": 900,
+   "h": 1124,
+   "ingredients": [
+    "Potato bun",
+    "Smashed patties",
+    "Cheddar",
+    "Grilled sweet onion",
+    "Homemade pickles",
+    "Mustard"
+   ]
+  }
+ ]
+}

@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="Soul Buns &amp; Balls | Smash Burgers in Kalamata">
 <meta name="twitter:description" content="Smash burgers done right. Anagnostara 3, Kalamata.">
 <meta name="twitter:image" content="https://www.soulbunsandballs.com/og.jpg">
-<link rel="icon" type="image/png" href="avatar.png">
+<link rel="icon" type="image/png" href="/avatar.png">
 <link rel="canonical" href="https://www.soulbunsandballs.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,11 +118,13 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 /* Burger of the month: the poster sits as a framed picture on a light teal card */
 .botm{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:40px;align-items:center;background:var(--teal-tint);border-radius:18px;padding:32px}
 .botm figure{margin:0}
+.botm figure picture{display:block}
 .botm figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 14px 34px rgba(11,138,155,.25)}
 .botm figcaption{display:none}
 .botm .text{min-width:0}
 .botm .eyebrow{color:var(--teal);letter-spacing:.3em;text-transform:uppercase;font-size:.8rem;font-weight:600;margin:0 0 10px}
-.botm h3{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px;color:var(--ink);line-height:1.05}
+.botm .botm-name{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px;color:var(--ink);line-height:1.05;text-align:inherit}
+.botm .botm-name::after{display:none}
 .botm p{margin:0;letter-spacing:.06em;text-transform:uppercase;font-size:.95rem;line-height:1.7;color:var(--muted)}
 .botm p b{color:var(--orange);font-weight:600}
 .ing{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
@@ -131,6 +133,17 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 .botm .botm-note{margin-top:14px;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--ink)}
 .botm .tag{display:inline-block;margin-top:18px;background:var(--orange);color:#111;border-radius:999px;padding:6px 14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 @media (max-width:720px){.botm{grid-template-columns:1fr;padding:20px;gap:22px}.botm figure{max-width:300px;margin:0 auto}}
+
+.botm-more{text-align:center;margin:26px 0 0}
+
+/* Burger of the Month archive page */
+.archive-head{text-align:center;padding-block:48px 4px}
+.page-title{font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);font-size:1.05rem;margin:0}
+.page-title::after{content:"";display:block;width:44px;height:3px;background:var(--orange);margin:12px auto 0}
+.archive-head p{margin:18px auto 0;max-width:46ch;color:var(--muted)}
+.archive-list{display:grid;gap:28px;padding-block:36px 40px}
+.archive-list .botm{scroll-margin-top:110px}
+.archive-foot{text-align:center;padding-bottom:56px}
 
 /* Instagram */
 .ig-carousel{display:flex;align-items:stretch;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 0 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
@@ -142,6 +155,7 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 .ig-avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;flex:none;display:block}
 .ig-avatar img{width:100%;height:100%;display:block}
 .ig-dots{margin-left:auto;color:var(--muted);letter-spacing:1px}
+.ig-post picture{display:block}
 .ig-photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .ig-actions{display:flex;gap:14px;padding:10px 12px 4px}
 .ig-actions svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
@@ -153,8 +167,8 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 .ig-arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:none;color:var(--ink);font:inherit;font-size:1.1rem;cursor:pointer}
 .ig-arrow:hover{border-color:var(--teal);color:var(--teal)}
 @media (min-width:1100px){.ig-carousel{justify-content:center}}
-.ig-btn{display:inline-block;border:2px solid var(--teal);color:var(--teal);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:600;padding:10px 20px;border-radius:999px}
-.ig-btn:hover{background:var(--teal);color:#fff}
+.ig-btn,.btn-outline{display:inline-block;border:2px solid var(--teal);color:var(--teal);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:600;padding:10px 20px;border-radius:999px}
+.ig-btn:hover,.btn-outline:hover{background:var(--teal);color:#fff}
 
 /* Find us */
 .find{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;align-items:start}
@@ -163,6 +177,7 @@ h2::after{content:"";display:block;width:44px;height:3px;background:var(--orange
 .hours li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule);letter-spacing:.06em;text-transform:uppercase;font-size:.95rem}
 .hours li span:last-child{color:var(--teal);font-weight:600}
 .hours li.closed span:last-child{color:var(--muted);font-weight:400}
+.hours-note{margin:14px 0 0;font-size:.9rem;color:var(--muted)}
 .contact{margin:26px 0 0;padding:0;list-style:none;display:grid;gap:8px}
 .contact a{text-decoration:none;border-bottom:1px solid var(--teal)}
 .contact a:hover{color:var(--orange);border-color:var(--orange)}
@@ -258,7 +273,7 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
 
 <main id="top">
   <div class="wrap hero">
-    <img class="logo" src="logo.png" alt="Soul Buns & Balls logo" width="963" height="306">
+    <img class="logo" src="/logo.png" alt="Soul Buns & Balls logo" width="963" height="306">
     <h1 class="hero-h1" data-el="Smash burgers στην Καλαμάτα">Smash burgers in Kalamata</h1>
     <p data-el="Ένα smashburger spot στην Καλαμάτα με μικρό, προσεγμένο μενού. Λίγα burgers, φρέσκα κάθε μέρα, φτιαγμένα με μεράκι.">A smashburger spot in Kalamata with a short, focused menu. A small selection of burgers, cooked fresh daily with care and intention.</p>
     <div class="chips">
@@ -330,18 +345,7 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
   <section id="botm">
     <div class="wrap">
       <h2 data-el="Burger του μήνα">Burger of the month</h2>
-      <div class="botm">
-        <!-- Each month: replace botm.jpg with the new poster, and update the three text lines + the tag below -->
-        <figure><img src="botm.jpg" alt="Kuchisabishii Smash, November 2026 Burger of the Month at Soul Buns & Balls, Kalamata" width="1100" height="1374" loading="lazy"><figcaption>Burger of the month poster</figcaption></figure>
-        <div class="text">
-          <!-- Update these each month: month, name, ingredient list, note, tag -->
-          <p class="eyebrow" data-el="Νοέμβριος 2026">November 2026</p>
-          <h3>Kuchisabishii Smash</h3>
-          <ul class="ing"><li>Potato bun</li><li>Smashed patties</li><li>Cheddar</li><li>Pickled mushrooms</li><li>Cabbage</li><li>Crunchy fried onion</li><li>Kewpie mayo</li><li>Tonkatsu ponzu ketchup</li></ul>
-          <p class="botm-note" data-el="Kuchisabishii: η ιαπωνική λέξη για το «μοναχικό στόμα», όταν θες να φας όχι από πείνα αλλά για παρέα.">In Japan, they have a word for when your mouth feels lonely and craves a little company: kuchisabishii.<br><br>Our burgers never leave a mouth lonely, and this one is here to keep you company all November.</p>
-          <span class="tag" data-el="Όλο τον Νοέμβριο">Available all November</span>
-        </div>
-      </div>
+      <!--BOTM-CURRENT: generated by build.py from _src/botm.json (first entry = this month)-->
     </div>
   </section>
 
@@ -352,24 +356,24 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
       <div class="ig-carousel" id="ig-carousel">
         <!-- POST 1: https://www.instagram.com/p/DfZoZ9bK8yS/ — image ig1.jpg; edit the caption line below -->
         <a class="ig-post" href="https://www.instagram.com/p/DfZoZ9bK8yS/" target="_blank" rel="noopener">
-          <span class="ig-head"><span class="ig-avatar"><img src="avatar.png" alt="" width="256" height="256" loading="lazy"></span><span><b>soulbunsandballs</b><small>Kalamata</small></span><span class="ig-dots">···</span></span>
-          <img class="ig-photo" src="ig1.jpg" alt="Two friends biting into Soul Buns & Balls smash burgers" width="800" height="1000" loading="lazy">
+          <span class="ig-head"><span class="ig-avatar"><img src="/avatar.png" alt="" width="256" height="256" loading="lazy"></span><span><b>soulbunsandballs</b><small>Kalamata</small></span><span class="ig-dots">···</span></span>
+          <picture><source type="image/webp" srcset="/ig1.webp"><img class="ig-photo" src="/ig1.jpg" alt="Two friends biting into Soul Buns & Balls smash burgers" width="800" height="1000" loading="lazy"></picture>
           <span class="ig-actions"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.5 6c-2 4.4-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.9A8 8 0 1 1 21 12z"/></svg><svg viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7z"/></svg></span>
           <span class="ig-cap"><b>soulbunsandballs</b> Good company, even better burgers. 🧡</span>
           <span class="ig-open">View on Instagram</span>
         </a>
         <!-- POST 2: https://www.instagram.com/p/DaabGRWI4Rl/ — image ig2.jpg; edit the caption line below -->
         <a class="ig-post" href="https://www.instagram.com/p/DaabGRWI4Rl/" target="_blank" rel="noopener">
-          <span class="ig-head"><span class="ig-avatar"><img src="avatar.png" alt="" width="256" height="256" loading="lazy"></span><span><b>soulbunsandballs</b><small>Kalamata</small></span><span class="ig-dots">···</span></span>
-          <img class="ig-photo" src="ig2.jpg" alt="Wrapped burgers and crunchy fries on a tray" width="800" height="1000" loading="lazy">
+          <span class="ig-head"><span class="ig-avatar"><img src="/avatar.png" alt="" width="256" height="256" loading="lazy"></span><span><b>soulbunsandballs</b><small>Kalamata</small></span><span class="ig-dots">···</span></span>
+          <picture><source type="image/webp" srcset="/ig2.webp"><img class="ig-photo" src="/ig2.jpg" alt="Wrapped burgers and crunchy fries on a tray" width="800" height="1000" loading="lazy"></picture>
           <span class="ig-actions"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.5 6c-2 4.4-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.9A8 8 0 1 1 21 12z"/></svg><svg viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7z"/></svg></span>
           <span class="ig-cap"><b>soulbunsandballs</b> Soul in every bite. Burgers and crunchy fries, ready to go.</span>
           <span class="ig-open">View on Instagram</span>
         </a>
         <!-- POST 3: https://www.instagram.com/p/DfOHlk7oe-W/ — image ig3.jpg; edit the caption line below -->
         <a class="ig-post" href="https://www.instagram.com/p/DfOHlk7oe-W/" target="_blank" rel="noopener">
-          <span class="ig-head"><span class="ig-avatar"><img src="avatar.png" alt="" width="256" height="256" loading="lazy"></span><span><b>soulbunsandballs</b><small>Kalamata</small></span><span class="ig-dots">···</span></span>
-          <img class="ig-photo" src="ig3.jpg" alt="Cross-section of a smash burger under the Soul in every bite neon sign" width="800" height="1000" loading="lazy">
+          <span class="ig-head"><span class="ig-avatar"><img src="/avatar.png" alt="" width="256" height="256" loading="lazy"></span><span><b>soulbunsandballs</b><small>Kalamata</small></span><span class="ig-dots">···</span></span>
+          <picture><source type="image/webp" srcset="/ig3.webp"><img class="ig-photo" src="/ig3.jpg" alt="Cross-section of a smash burger under the Soul in every bite neon sign" width="800" height="1000" loading="lazy"></picture>
           <span class="ig-actions"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.5 6c-2 4.4-9.5 9-9.5 9z"/></svg><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.9A8 8 0 1 1 21 12z"/></svg><svg viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7z"/></svg></span>
           <span class="ig-cap"><b>soulbunsandballs</b> Smash burgers done right.</span>
           <span class="ig-open">View on Instagram</span>
@@ -394,6 +398,7 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
             <li><span data-el="Σάββατο">Saturday</span><span data-el="18:00 – sold out">18:00 – sold out</span></li>
             <li><span data-el="Κυριακή">Sunday</span><span data-el="18:00 – sold out">18:00 – sold out</span></li>
           </ul>
+          <p class="hours-note" data-el="Οι ποσότητες είναι περιορισμένες. Για σιγουριά, έλα κοντά στις 18:00 ή πάρε μας τηλέφωνο.">Quantities are limited. To be sure, come close to 18:00 or call us.</p>
           <ul class="contact">
             <li class="copy-row"><span data-el="Αναγνωσταρά 3, Καλαμάτα 24100">Anagnostara 3, Kalamata 24100</span> <button type="button" class="copy" data-copy="Anagnostara 3, Kalamata 24100" aria-label="Copy address" data-el="Αντιγραφή">Copy</button></li>
             <li class="copy-row"><a href="tel:+302721303682">+30 2721 303682</a> <button type="button" class="copy" data-copy="+302721303682" aria-label="Copy phone number" data-el="Αντιγραφή">Copy</button></li>
@@ -423,7 +428,7 @@ gtag('js',new Date());gtag('config','G-F4WPJ429SR',{anonymize_ip:true});
       </a>
     </div>
     <p data-el="Smash burgers όπως πρέπει">Smash burgers done right</p>
-    <img src="tagline.png" alt="Soul Buns & Balls — Soul in every bite" width="345" height="230" style="width:170px;height:auto;margin:12px auto 0;display:block">
+    <img src="/tagline.png" alt="Soul Buns & Balls — Soul in every bite" width="345" height="230" style="width:170px;height:auto;margin:12px auto 0;display:block">
     <p>© 2026 Soul Buns &amp; Balls · Kalamata</p>
   </div>
 </footer>
