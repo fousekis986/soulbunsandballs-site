@@ -268,7 +268,7 @@ def llms(menu_en, menu_el):
 - Address: Anagnostara 3, Kalamata 24100, Greece
 - Phone: +30 2721 303682
 - Email: soulbunsandballs@gmail.com
-- Hours: Tuesday–Sunday from 18:00 until sold out; closed Monday. Quantities are limited: come close to 18:00 or call to be sure.
+- Hours: Tuesday–Sunday from 18:00 until sold out; closed Monday.
 - Service: dine in at the bar, takeaway, delivery via Wolt (https://wolt.com/el/grc/kalamata/restaurant/soul-buns-balls)
 - Instagram: https://www.instagram.com/soulbunsandballs/
 - Facebook: https://www.facebook.com/soulbunsandballs/
